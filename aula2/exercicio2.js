@@ -3,15 +3,16 @@ const express =  require("express")
 const app = express()
 
 app.get("/" , function(req, res){
-    res.send("Página inicial")
+ 
+    res.sendFile(__dirname + "/html/index.html")
 })
 
 app.get("/sobre" , function(req , res){
-   res.send("Página sobre")
+   res.sendFile(__dirname + "/html/sobre.html")
 })
 
 app.get("/contato" , function(req, res){
-     res.send("Entre em contato conosco")
+     res.sendFile(__dirname + "/html/contato.html")
 })
 
 app.get("/aluno/:nome/:idade" , function(req, res){
